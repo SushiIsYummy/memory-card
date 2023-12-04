@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(214, 214, 214, 0.7);
   padding: 10px;
   border-radius: 10px;
   border: none;
@@ -12,11 +12,16 @@
 }
 
 .card:hover {
-  box-shadow: rgb(105, 196, 105) 0px 5px 15px;
+  box-shadow: rgb(250, 143, 3) 0px 5px 15px;
   transform: scale(1.03);
 }
 
 .card img {
   width: 150px;
   height: 150px;
+}
+
+.card p {
+  font-weight: bold;
+  font-size: 1rem;
 }
