@@ -1,0 +1,65 @@
+.difficulty-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(177, 177, 177, 0.5);
+  width: fit-content;
+  padding: 50px;
+  border-radius: 10px;
+  margin: 0 20px;
+  margin-bottom: 100px;
+}
+
+.difficulty-selection h2 {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+
+.difficulty-buttons button,
+.difficulty-selection .play-button,
+.difficulty-selection .quit-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.difficulty-buttons button:hover {
+  text-decoration: underline;
+}
+
+.difficulty-buttons button.selected {
+  text-decoration: underline;
+}
+
+.difficulty-selection p {
+  font-size: 2rem;
+}
+
+.difficulty-selection .play-button {
+  color: blue;
+  text-align: center;
+}
+
+.difficulty-selection .quit-button {
+  color: red;
+}
+
+.difficulty-selection .action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: bold;
+}
+
+.difficulty-selection .action-buttons button {
+  font-weight: bold;
+}

@@ -1,3 +1,8 @@
+.game {
+  align-self: flex-start;
+  margin: 0 20px;
+}
+
 .scores-container {
   display: flex;
   justify-content: center;
@@ -12,7 +17,6 @@
   background-color: rgb(0, 0, 0, 0.35);
   width: fit-content;
   border-radius: 10px;
-  /* border: none; */
 }
 
 .scores p {

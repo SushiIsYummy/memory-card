@@ -7,13 +7,15 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  /* width: 300px;
-  height: 300px; */
 }
 
 .card:hover {
   box-shadow: rgb(250, 143, 3) 0px 5px 15px;
   transform: scale(1.03);
+}
+
+.card:active {
+  transform: scale(0.95);
 }
 
 .card img {
