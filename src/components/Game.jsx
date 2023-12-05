@@ -82,16 +82,17 @@ function Game({
   
   return (
     <div className="game">
+      <p className='instructions'>Click a Pokemon card to earn points, but don't click the same Pokemon twice.</p>
       <div className="scores-container">
         <div className="scores">
-          <p className='current-score'>Current Score: {currentScore}</p>
           <p className='highscore'>High Score: {highscore}</p>
+          <p className='current-score'>Current Score: {currentScore}</p>
         </div>
       </div>
       <div className="cards-container">
         {pokemonData.length > 0 && pokemonData.map((pokemonInfo) =>
           <Card key={pokemonInfo.name} pokemonImg={pokemonInfo.img} pokemonName={pokemonInfo.name} handlePokemonClicked={handlePokemonClicked}/>)}
-        {pokemonData.length === 0 && <p>Loading...</p>}
+        {pokemonData.length === 0 && <p className='loading-text'>Loading Cards...</p>}
       </div>
       {gamehasEnded && <EndGameScreen finalScore={currentScore} wonGame={wonGame} playAgain={playAgain} changeToDifficultyScreen={changeToDifficultyScreen}/>}
     </div>

@@ -15,7 +15,7 @@ const difficultyMapping = {
 };
 
 const Homepage = () => {
-  const [difficulty, setDifficulty] = useState(null);
+  const [difficulty, setDifficulty] = useState('easy');
   const [currentScreen, setCurrentScreen] = useState(screens.difficultyScreen);
   const [highscores, setHighscores] = useState({
     easy: 0,
@@ -49,7 +49,11 @@ const Homepage = () => {
 
   return (
     <>
-      <h1 className="title">Pokemon Memory Card Game</h1>
+      <header>
+        <div className="title-background">
+          <a className="title" onClick={changeToDifficultyScreen}>Pokemon Memory Card Game</a>
+        </div>
+      </header>
       <main>
         {currentScreen === screens.difficultyScreen && 
         <DifficultyScreen 

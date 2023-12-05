@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: rgb(177, 177, 177, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   width: fit-content;
   padding: 50px;
   border-radius: 10px;
@@ -11,25 +11,38 @@
 }
 
 .difficulty-selection h2 {
-  font-size: 2rem;
-  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  color: white;
   text-align: center;
 }
 
 .difficulty-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   color: white;
 }
 
+.difficulty-buttons .easy {
+  color: green;
+}
+.difficulty-buttons .medium {
+  color: rgb(255, 196, 0);
+}
+.difficulty-buttons .hard {
+  color: red;
+}
+
 .difficulty-buttons button,
-.difficulty-selection .play-button,
-.difficulty-selection .quit-button {
+.difficulty-selection .play-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 2.4rem;
+}
+
+.difficulty-buttons button {
+  font-size: 1.7rem;
 }
 
 .difficulty-buttons button:hover {
@@ -45,8 +58,12 @@
 }
 
 .difficulty-selection .play-button {
-  color: blue;
+  color: rgb(0, 174, 255);
   text-align: center;
+}
+
+.difficulty-selection .play-button:hover {
+  text-decoration: underline;
 }
 
 .difficulty-selection .quit-button {

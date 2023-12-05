@@ -16,6 +16,7 @@
   padding: 20px;
   background-color: rgb(191, 202, 192);
   border-radius: 10px;
+  margin: 20px;
 }
 
 .modal-content p {
@@ -38,40 +39,41 @@
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+}
+.modal-content .message .extra-info {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.modal-content .message .win-message {
+  color: yellow;
+}
+.modal-content .message .lose-message {
+  color: red;
 }
 
 .modal-content .action-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .modal-content button.play-again,
-.modal-content button.change-difficulty,
 .modal-content button.quit {
   padding: 5px 10px;
-  border-radius: none;
-  font-size: 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
   cursor: pointer;
+  color: white;
+  border: none;
 }
 
 .modal-content button.play-again {
-  color: white;
   background-color: #1e90ff;
-  border: none;
-}
-
-.modal-content button.change-difficulty {
-  color: white;
-  background-color: green;
-  border: none;
 }
 
 .modal-content button.quit {
-  color: white;
   background-color: red;
-  border: none;
 }

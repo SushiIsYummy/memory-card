@@ -14,20 +14,25 @@ function EndGameScreen({
         <div className="message">
           {wonGame && 
           <>
-            <p className='win-message'>You Win! <br/> You caught all the pokemon!</p>
+            <div className="text">
+              <p className='win-message'>You Win!</p>
+              <p className="extra-info">You caught all the pokemon!</p>
+            </div>
             <img src={winImg} alt="win image" />
           </>}
           {!wonGame && 
           <>
-            <p className='lose-message'>You Lose! <br/> You caught a duplicate pokemon!</p>
+            <div className="text">
+              <p className='lose-message'>You Lose!</p>
+              <p className="extra-info">You caught the same pokemon twice!</p>
+            </div>
             <img src={loseImg} alt="lose image" />
           </>}
           <p className='score'>Final Score: {finalScore}</p>
         </div>
         <div className="action-buttons">
           <button className='play-again' onClick={playAgain}>Play Again</button>
-          <button className='change-difficulty' onClick={changeToDifficultyScreen}>Change Difficulty</button>
-          <button className='quit'>Quit</button>
+          <button className='quit' onClick={changeToDifficultyScreen}>Quit</button>
         </div>
       </div>
     </div>
