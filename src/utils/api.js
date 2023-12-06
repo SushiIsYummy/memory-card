@@ -1,4 +1,4 @@
-export const fetchPokemonImg = async (id) => {
+export const fetchPokemonData = async (id) => {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
   const pokemonData = await response.json();
   return {

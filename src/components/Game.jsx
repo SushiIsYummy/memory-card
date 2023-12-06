@@ -2,7 +2,7 @@ import '../styles/Game.css'
 import { useEffect, useState } from 'react'
 import Card from './Card'
 import '../styles/global.css'
-import { fetchPokemonImg } from '../utils/api';
+import { fetchPokemonData } from '../utils/api';
 import { shuffle } from 'underscore';
 import EndGameScreen from './EndGameScreen';
 
@@ -22,13 +22,13 @@ function Game({
 
   useEffect(() => {
     async function fillPokemonImgs() {
-      const tempPokemonImgs = []
+      const tempPokemonData = []
       const randomPokemonIds = getRandomPokemonIds(numberOfCards);
       for (let i = 0; i < randomPokemonIds.length; i++) {
-        const pokemonImg = await fetchPokemonImg(randomPokemonIds[i]);
-        tempPokemonImgs.push(pokemonImg);
+        const pokemonData = await fetchPokemonData(randomPokemonIds[i]);
+        tempPokemonData.push(pokemonData);
       }
-      setPokemonData(tempPokemonImgs);
+      setPokemonData(tempPokemonData);
     }
     fillPokemonImgs();
   }, [numberOfCards, playCount]);
@@ -66,6 +66,8 @@ function Game({
   function playAgain() {
     setGameHasEnded(false);
     setCurrentScore(0);
+    setPokemonData([]);
+    setWonGame(null);
     setChosenPokemon(new Set());
     setPlayCount((prevPlayCount) => prevPlayCount + 1);
   }
