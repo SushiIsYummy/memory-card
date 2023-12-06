@@ -36,15 +36,12 @@ function Game({
   function getRandomPokemonIds(count) {
     let numbers = Array.from({ length: 151 }, (_, index) => index + 1);
     numbers = shuffle(numbers);
-    console.log(numbers);
     const randomIds = numbers.slice(0, count);
     return randomIds;
   }
 
   function handlePokemonClicked(e) {
     const { name } = e.target.closest('button');
-    console.log(e.target);
-    console.log(name);
     if (!chosenPokemon.has(name)) {
       setChosenPokemon((prevSet) => new Set(prevSet).add(name));
       setCurrentScore((prevScore) => prevScore + 1);

@@ -50,7 +50,7 @@ const Homepage = () => {
   return (
     <>
       <header>
-        <div className="title-background">
+        <div className="title-background" onClick={changeToDifficultyScreen}>
           <a className="title" onClick={changeToDifficultyScreen}>Pokemon Memory Card Game</a>
         </div>
       </header>

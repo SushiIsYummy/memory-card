@@ -80,3 +80,26 @@
 .difficulty-selection .action-buttons button {
   font-weight: bold;
 }
+
+@media only screen and (width <= 450px) {
+  .difficulty-selection {
+    padding: 20px;
+  }
+
+  .difficulty-selection h2 {
+    font-size: 2.5rem;
+  }
+
+  .difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+  }
+
+  .difficulty-buttons .easy,
+  .difficulty-buttons .medium,
+  .difficulty-buttons .hard {
+    font-size: 1.7rem;
+  }
+}

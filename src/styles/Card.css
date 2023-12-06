@@ -28,3 +28,10 @@
   font-size: 1rem;
   margin-bottom: 10px;
 }
+
+@media only screen and (width <= 800px) {
+  .card img {
+    width: 120px;
+    height: 120px;
+  }
+}
